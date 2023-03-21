@@ -50,12 +50,10 @@ const Navbar = () => {
         </div>
         <Link className="btn btn-ghost normal-case text-xl">Doctors Portal</Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{menuItem}</ul>
       </div>
-      <div className="navbar-end">
-        <Link className="btn">Get started</Link>
-      </div>
+      
     </div>
   );
 };
