@@ -11,14 +11,14 @@ const AvailableAppointment = ({ selected }) => {
   }, []);
   console.log(selected);
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <p
-        className="my-10 text-center text-secondary
+        className="my-10  text-secondary
        font-bold"
       >
         Available Appointment on {format(selected, "PP")}
       </p>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto">
+      <div className="grid gap-6  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <AppointmentOption
             key={service.id}
