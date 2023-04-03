@@ -1,8 +1,6 @@
 import React from "react";
-import Button from "../../../shared/button/Button";
 
-const AppointmentOption = ({ service }) => {
-  console.log(service);
+const AppointmentOption = ({ service, setTreatment }) => {
   const { name, slots } = service;
   return (
     <div className="card  bg-base-100 shadow-xl">
@@ -14,7 +12,14 @@ const AppointmentOption = ({ service }) => {
           {slots.length > 1 ? " Spaces" : " Space"} Available
         </p>
         <div className="card-actions justify-center">
-          <Button>Book Now</Button>
+          <label
+            disabled={slots.length < 1}
+            onClick={() => setTreatment(service)}
+            htmlFor="booking-modal"
+            className="btn btn-secondary"
+          >
+            Book Appointment
+          </label>
         </div>
       </div>
     </div>
